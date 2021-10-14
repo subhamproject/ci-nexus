@@ -20,36 +20,28 @@ pipeline {
     stage('Maven Build') {
       steps {
         script {
-          sh '''
-            build.sh
-          '''
+          sh './build.sh'
         }
       }
     }
     stage('Nexus Jar Push') {
       steps {
         script {
-          sh '''
-            push-jar.sh
-          '''
+          sh './push-jar.sh'
         }
       }
     }
    stage('Docker Image Build') {
       steps {
         script {
-          sh '''
-            image-build.sh
-          '''
+          sh './image-build.sh'
         }
       }
     }
    stage('Docker Image Push') {
       steps {
         script {
-          sh '''
-            image-push.sh
-          '''
+          sh './ image-push.sh'
         }
       }
     }
