@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+TAG=$TAG
+REGISTRY="${REGISTRY}"
+
+DOCKER_USER=$DOCKER_USER
+DOCKER_PASS=$DOCKER_PASS
+
+docker login $REGISTRY -u $DOCKER_USER -p $DOCKER_PASS
+[ $? -eq 0 ] && docker push $REGISTRY/$TAG
