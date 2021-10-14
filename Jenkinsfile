@@ -11,7 +11,6 @@ pipeline {
       DOCKER_USER = credentials('DOCKER_USER')
       DOCKER_PASS = credentials('DOCKER_PASS')
    }
-   }
   agent any
    parameters{
     string(name: 'TAG', defaultValue: 'develop-latest', description: 'Please change the image tag.')
