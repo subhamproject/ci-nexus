@@ -51,14 +51,14 @@
 <repositories>
 		<repository>
 			<id>nexus</id>
-			<url>http://52.90.1.4:8081//repository/${env.NEXUS_REPO}</url>
+			<url>http://54.82.127.88:8081/repository/${env.NEXUS_REPO}</url>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
-			<url>http://52.90.1.4:8081/repository/${env.NEXUS_REPO}</url>
+			<url>http://54.82.127.88:8081/repository/${env.NEXUS_REPO}</url>
 		</repository>
 	</distributionManagement>
 </project>
