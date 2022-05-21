@@ -26,7 +26,7 @@ pipeline {
         }
       }
     }
-    stage('Nexus Jar Push') {
+    stage('Jar Push Private Repo') {
       steps {
         script {
           sh './push-jar.sh'
@@ -40,7 +40,7 @@ pipeline {
         }
       }
     }
-   stage('Docker Image Push') {
+   stage('Image Push Private Repo') {
       steps {
         script {
           sh './image-push.sh'
