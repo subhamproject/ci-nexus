@@ -8,14 +8,12 @@ pipeline {
   environment {
       NEXUS_USER = credentials('NEXUS_USER')
       NEXUS_PASS = credentials('NEXUS_PASS')
-      DOCKER_USER = credentials('DOCKER_USER')
-      DOCKER_PASS = credentials('DOCKER_PASS')
    }
   agent any
    parameters{
     string(name: 'TAG', defaultValue: 'develop-latest', description: 'Please change the image tag.')
-    string(name: 'NEXUS_REPO', defaultValue: 'snapshot', description: 'Please provide nexus repo name.')
-    string(name: 'REGISTRY', defaultValue: '52.90.1.4:5000', description: 'Private docker registry URL.')
+    choice(name: 'ECR_REPO', choices: ['blue', 'green'], description: 'Please choose ECR repo you wish to build image for?')
+    string(name: 'AWS_REGION', defaultValue: 'us-west-2', description: 'Please provide AWS region for ECR repo.')
     string(name: 'NEXUS_REGISTRY', defaultValue: '52.90.1.4:8081', description: 'Private nexus registry URL.')
 }
   stages {
