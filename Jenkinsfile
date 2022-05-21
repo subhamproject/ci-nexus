@@ -15,7 +15,8 @@ pipeline {
    parameters{
     string(name: 'TAG', defaultValue: 'develop-latest', description: 'Please change the image tag.')
     string(name: 'NEXUS_REPO', defaultValue: 'snapshot', description: 'Please provide nexus repo name.')
-    string(name: 'REGISTRY', defaultValue: '52.90.1.4:5000', description: 'Private registry id.')
+    string(name: 'REGISTRY', defaultValue: '52.90.1.4:5000', description: 'Private docker registry URL.')
+    string(name: 'NEXUS_REGISTRY', defaultValue: '52.90.1.4:8081', description: 'Private nexus registry URL.')
 }
   stages {
     stage('Maven Build') {
