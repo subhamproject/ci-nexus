@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 TAG=$TAG
-REGION=AWS_REGION
+REGION=$AWS_REGION
 REPO=$ECR_REPO
 grep 'region' ~/.aws/config > /dev/null 2>&1 || aws configure set default.region $REGION
 
