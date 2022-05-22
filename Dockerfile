@@ -2,7 +2,7 @@ FROM maven:latest
 RUN useradd -m -d /home/app -s /bin/bash app && \
     mkdir -p /app
 WORKDIR /app
-ADD --chown=app:app ./target/devops-for-all-*.jar devopsforall.jar
+ADD --chown=app:app ./target/*.jar devopsforall.jar
 ADD --chown=app:app entry.sh entry.sh
 USER app
 ENTRYPOINT [ "/app/entry.sh" ]
