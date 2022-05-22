@@ -5,7 +5,7 @@
     <artifactId>devops-for-all</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
-    <name>docker-java-app-example</name>
+    <name>devops-for-all</name>
     <url>http://maven.apache.org</url>
 
     <properties>
