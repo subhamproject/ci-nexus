@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("app")
 public class HelloController {
 	
-	@RequestMapping(value = "/blue", method = RequestMethod.GET)
+	@RequestMapping(value = "/green", method = RequestMethod.GET)
 	public String test() {
-		return "Welcome to DevOpsForAll ECS Demo for Blue Targets " ;
+		return "Welcome to DevOpsForAll ECS Demo for Green Targets..! " ;
 	}
 
 }
