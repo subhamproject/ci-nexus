@@ -4,7 +4,7 @@
     <groupId>com.levo.dockerexample</groupId>
     <artifactId>devops-for-all</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>devops-for-all</name>
     <url>http://maven.apache.org</url>
 
